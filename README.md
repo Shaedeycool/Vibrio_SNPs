@@ -11,7 +11,9 @@ set workspace=<your directory>
 
 set run_name=<directory that contains the "Vibrio cholerae assemblies" folder>
 
-```bash ~/vibrio_scripts_and_blast_database/vibrio_snps.sh $workplace $run_name```
+```
+bash ~/vibrio_scripts_and_blast_database/vibrio_snps.sh $workplace $run_name
+```
 
 # Conda environments needed. 
 These paths would need to be edited to reflect the paths of your conda environments.
