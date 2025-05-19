@@ -1,0 +1,7 @@
+KF498634.1	Vibrio cholerae strain BB31 ToxR (toxR) gene, complete cds
+AF463401.1	Vibrio cholerae strain 203-93 CtxA (ctxA) gene, complete cds
+KC152957.1	Vibrio cholerae O1 biovar El Tor strain 95001 wbe gene cluster, complete sequence
+AB012956.1	Vibrio cholerae genes for O-antigen synthesis, strain MO45, complete cds
+M33514.1	V.cholerae major Z17561 (Classical, Inaba) pilin subunit (tcpA) gene, complete cds
+KP187623.1	Vibrio cholerae strain 26975 toxin coregulated pilin protein (tcpA) gene, complete cds
+JF284685.1	Vibrio cholerae O1 biovar El Tor S-adenosylmethionine-dependent methyl transferase (wbeT) gene, complete cds
