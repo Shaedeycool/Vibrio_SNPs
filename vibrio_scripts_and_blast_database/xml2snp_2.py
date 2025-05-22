@@ -28,7 +28,7 @@ with open(args.input) as result_handle:
                 match_length_pct = (hsp.align_length / alignment.length) * 100
 
                 # Only consider alignments with >95% identity and near full gene length
-                if identity_pct >= 85 and match_length_pct >= 85:
+                if identity_pct >= 90 and match_length_pct >= 90:
                     query_seq = hsp.query
                     subject_seq = hsp.sbjct
                     query_start = hsp.query_start
