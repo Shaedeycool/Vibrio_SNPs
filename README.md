@@ -29,3 +29,10 @@ These paths would need to be edited in the "vibrio_snps.sh" shell script to refl
 
 ~/anaconda/anaconda3_2021-05-01/conda/envs/biopython
 
+# Citations
+
+The following conda environments were used:
+
+BLAST: "Camacho, C., Coulouris, G., Avagyan, V., Ma, N., Papadopoulos, J., Bealer, K., and Madden, T.L. (2009). BLAST+: architecture and applications. BMC Bioinformatics, 10, 421."
+
+BioPython: "Cock, P. J., Antao, T., Chang, J. T., Chapman, B. A., Cox, C. J., Dalke, A., … others. (2009). Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics, 25(11), 1422–1423."
