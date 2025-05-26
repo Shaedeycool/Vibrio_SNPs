@@ -7,9 +7,9 @@ Assembled genomes are required as input.
 The "vibrio_snps.sh" shell script looks for fasta assemblies within directory set as workspace
 
 # Command to run vibrio_snps.sh
-set workspace=<your folder>
+set workspace="directory that contains run_name"
 
-set run_name=<directory that contains the "Vibrio cholerae assemblies" folder>
+set run_name="directory that contains the "Vibrio cholerae assemblies" folder"
 
 For example: if assembling multiple Illumina genomes 
 run_name="250516_VH012345_Name_Vibrio_B1" 
