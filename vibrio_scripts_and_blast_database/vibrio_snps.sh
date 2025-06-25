@@ -11,14 +11,13 @@ runname=$2
 reportsDir=$1"/Results-"$2
 workdir=$1/"vibrio_cholerae_snps"
 
-source ~/anaconda/anaconda3_2021-05-01/bin/activate # Edit
-conda activate ~/anaconda/anaconda3_2021-05-01/envs/blast # Edit
+cd ${workspace}/${runname}
 
 mkdir vibrio_cholerae_snps
 
 output_dir="vibrio_cholerae_snps"
 
-for file in *_assembly.fasta; do
+for file in assemblies/*/*_assembly.fasta; do
 ## Extract sample name from the filename (e.g., YA00570981)
     sample=$(basename "$file" | cut -d'_' -f1)
 
@@ -27,11 +26,8 @@ for file in *_assembly.fasta; do
     output_file="${sample}_blast_output.xml"
 
 ## Run blastn
-    blastn -query "$input_file" -db ~/vibrio_scripts_and_blast_database/db/vcO1O139_markers -out $output_dir/"$output_file" -outfmt 5
+    blastn -query "$input_file" -db ${workspace}/Vibrio_SNPs/vibrio_scripts_and_blast_database/db/vcO1O139_markers -out $output_dir/"$output_file" -outfmt 5
 done
-
-conda activate ~/anaconda/anaconda3_2021-05-01/conda/envs/biopython # Edit
-
 
 for file in $output_dir/*_blast_output.xml; do
 ## Extract sample name from the filename (e.g., YA00570981)
@@ -42,15 +38,11 @@ for file in $output_dir/*_blast_output.xml; do
     output_file="${sample}_blast_output.txt"
 
 ## Run your Python script
-    python ~/vibrio_scripts_and_blast_database/xml2snp_2.py -i "$input_file" -o $output_dir/"$output_file"
+    python ${workspace}/Vibrio_SNPs/vibrio_scripts_and_blast_database/xml2snp_2.py -i "$input_file" -o $output_dir/"$output_file"
 done
 
 ## Run Python script to make a complete table
-python ~/vibrio_scripts_and_blast_database/snp_merge.py
+python ${workspace}/Vibrio_SNPs/vibrio_scripts_and_blast_database/snp_merge.py
 
-## Run Python script to combine with original excel file
-python ~/vibrio_scripts_and_blast_database/merge_VCH_xlsx.py
-
-
-## Rename merged_output
-#cp $workdir/merged_ouput.xlsx $workdir/${runname}-WGS-typing-report-snps.xlsx
+cp ${output_dir}/vch_snp_table.xlsx .
+mv vch_snp_table.xlsx Vibrio_cholerae_assembly_results.xlsx
