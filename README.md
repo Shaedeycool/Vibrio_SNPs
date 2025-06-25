@@ -4,7 +4,7 @@ Parse BLAST XML and extract single-nucleotide polymorphisms from high-identity, 
 # Input data
 Assembled genomes are required as input, within a directory in the form of:
 
-assemblies/*/*_assembly.fasta
+"assemblies/*/*_assembly.fasta"
 
 The "vibrio_snps.sh" shell script looks for fasta assemblies within assemblies directory within the set workspace
 
