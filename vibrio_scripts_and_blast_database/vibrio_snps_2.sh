@@ -11,6 +11,9 @@ runname=$2
 reportsDir=$1"/Results-"$2
 workdir=$1/"vibrio_cholerae_snps"
 
+mv ${workspace}/Vibrio_SNPs/vibrio_scripts_and_blast_database/Control-04 ${workspace}/${runname}/assemblies
+mv ${workspace}/Vibrio_SNPs/vibrio_scripts_and_blast_database/Control-05 ${workspace}/${runname}/assemblies
+
 cd ${workspace}/${runname}
 
 mkdir vibrio_cholerae_snps
