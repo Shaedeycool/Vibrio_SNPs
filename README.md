@@ -18,7 +18,7 @@ For example: if assembling multiple Illumina genomes
 run_name="250516_VH012345_Name_Vibrio_B1" 
 
 ```
-bash Vibrio_SNPs/vibrio_scripts_and_blast_database/vibrio_snps.sh $workplace $run_name
+bash Vibrio_SNPs/vibrio_scripts_and_blast_database/vibrio_snps_2.sh $workplace $run_name
 ```
 
 # Conda environments needed. 
